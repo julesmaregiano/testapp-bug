@@ -1,0 +1,10 @@
+//= require jquery/dist/jquery.min.js
+//= require popper.js/dist/umd/popper.js
+//= require bootstrap/dist/js/bootstrap.min.js
+//= require moment/min/moment.min.js
+//= require metismenu/dist/metisMenu.js
+//= require simplebar/dist/simplebar.min.js
+//= require daterangepicker/daterangepicker.js
+//= require jquery-toast-plugin/dist/jquery.toast.min.js
+//= require bootstrap-timepicker/js/bootstrap-timepicker.min.js
+//= require bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js

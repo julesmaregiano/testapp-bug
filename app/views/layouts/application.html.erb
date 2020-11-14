@@ -9,7 +9,18 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+	<div class="wrapper">
+		<%= render 'layouts/partials/left-sidebar'%>
+		<div class="content-page">
+		<div class="content">
+			<%#= render 'layouts/partials/topbar'%>
+			<%= yield %>
+		</div>
+		<%#= render 'layouts/partials/footer'%>
+		</div>
+	</div>
+
+	<%= javascript_include_tag 'vendor', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<%= yield :extra_script %>
 </html>
