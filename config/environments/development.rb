@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+#   config.session_store :cache_store
+  config.assets.check_precompiled_asset = false
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -27,6 +30,9 @@ Rails.application.configure do
 
     config.cache_store = :null_store
   end
+
+  # Devise mailer default URL
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local

@@ -8,3 +8,4 @@
 //= require jquery-toast-plugin/dist/jquery.toast.min.js
 //= require bootstrap-timepicker/js/bootstrap-timepicker.min.js
 //= require bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js
+//= require apexcharts/dist/apexcharts.min.js

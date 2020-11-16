@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= favicon_link_tag image_path('earth-2.svg'), :rel => 'icon', :type =>  'image/png' %>
+		<title><%= meta_title %></title>
+		<meta name="description" content="<%= meta_description %>">
+	
+		<!-- Facebook Open Graph data -->
+		<meta property="og:title" content="<%= meta_title %>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="<%= request.original_url %>" />
+		<meta property="og:image" content="<%= meta_image %>" />
+		<meta property="og:description" content="<%= meta_description %>" />
+		<meta property="og:site_name" content="<%= meta_title %>" />
+	
+		<!-- Twitter Card data -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
+		<meta name="twitter:title" content="<%= meta_title %>">
+		<meta name="twitter:description" content="<%= meta_description %>">
+		<meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
+		<meta name="twitter:image:src" content="<%= meta_image %>">
+	
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
+		<%= stylesheet_link_tag    'icons', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= stylesheet_link_tag    'app', media: 'all', 'data-turbolinks-track': 'reload' %>
+	</head>
+
+	<body class="authentication-bg pb-0" data-layout-config='{"darkMode":false}'>
+		<div class="auth-fluid">
+			<!--Auth fluid left content -->
+			<div class="auth-fluid-form-box">
+				<div class="align-items-center d-flex h-100">
+					<div class="card-body">
+	
+						<!-- Logo -->
+						<div class="auth-brand text-center text-lg-left">
+							<a href="<%= root_path %>" class="logo-dark">
+								<span><img src="<%= image_path('saasinit-lg.png') %>" alt="" height="40px"></span>
+							</a>
+						</div>
+	
+						<%= yield %>
+						<%= render "devise/shared/links" %>
+	
+					</div> <!-- end .card-body -->
+				</div> <!-- end .align-items-center.d-flex.h-100-->
+			</div>
+			<!-- end auth-fluid-form-box-->
+	
+			<!-- Auth fluid right content -->
+			<div class="auth-fluid-right text-center">
+				<div class="auth-user-testimonial">
+					<h2 class="mb-3">I love the color!</h2>
+					<p class="lead"><i class="mdi mdi-format-quote-open"></i> It's a elegent templete. I love it very much! . <i class="mdi mdi-format-quote-close"></i>
+					</p>
+					<p>
+						- Hyper Admin User
+					</p>
+				</div> <!-- end auth-user-testimonial-->
+			</div>
+			<!-- end Auth fluid right content -->
+		</div>
+		<!-- end auth-fluid-->
+		<footer>
+			<%= javascript_include_tag 'vendor', 'data-turbolinks-track': 'reload' %>
+			<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+			<%= yield :extra_script %>
+		</footer>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
